@@ -17,6 +17,10 @@ provider "aws" "this" {
 
   config {
     region = each.value
+    access_key = var.aws_access_key
+    secret_key = var.aws_secret_key
+    # optional if you use STS temp creds
+    session_token = var.aws_session_token
 
    /* assume_role_with_web_identity {
       role_arn           = var.role_arn
