@@ -19,7 +19,7 @@ deployment "development" {
 
 deployment "production" {
   inputs = {
-    regions        = ["us-east-1", "us-west-1"]
+    regions        = ["us-west-1"]
     #role_arn       = "<YOUR_ROLE_ARN>"
     #identity_token = identity_token.aws.jwt
     default_tags = {
