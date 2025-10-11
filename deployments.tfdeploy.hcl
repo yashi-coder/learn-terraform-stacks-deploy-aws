@@ -5,6 +5,11 @@ identity_token "aws" {
   audience = ["aws.workload.identity"]
 }
 
+publish_output "deployment_instance_ids" {
+  description = "The instance Stack's Instance's ID."
+  value       = deployment.development.intance_ids
+}
+
 deployment "development" {
   inputs = {
     regions        = ["us-east-2"]
